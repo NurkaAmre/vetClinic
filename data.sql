@@ -78,3 +78,47 @@ UPDATE animals SET owner_id=4 where name='Squirtle';
 UPDATE animals SET owner_id=4 where name='Blossom';
 Dean Winchester owns Angemon and Boarmon.
 UPDATE animals SET owner_id=5 where owner_id IS NULL;
+
+-- DAY4
+-- Insert data for vets:
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES   ('Maisy Smith', 26, DATE '2019-01-17'),
+         ('Stephanie Mendez', 64, DATE '1981-05-04'),
+         ('Jack Harkness', 38, DATE '2008-06-08');
+
+-- Vet William Tatcher is specialized in Pokemon.
+INSERT INTO specializations (vet_id, species_id)
+VALUES (4, 1);
+
+-- Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+INSERT INTO specializations (vet_id, species_id)
+VALUES (2, 1);
+INSERT INTO specializations (vet_id, species_id)
+VALUES (2, 2);
+
+-- Vet Jack Harkness is specialized in Digimon.
+INSERT INTO specializations (vet_id, species_id)
+VALUES (3, 2);
+
+-- Insert the data for visits:
+INSERT INTO visits (animal_id, vet_id, date_of_visit)
+VALUES (1, 4, DATE '2020-05-24'),
+         (1, 2, DATE '2020-07-22'),
+         (2, 3, DATE '2021-02-02'),
+         (3, 1, DATE '2020-01-05'),
+         (3, 1, DATE '2020-03-08'),
+         (3, 1, DATE '2020-05-14'),
+         (4, 2, DATE '2021-05-04'),
+         (5, 3, DATE '2021-02-24'),
+         (6, 1, DATE '2019-12-21'),
+         (6, 4, DATE '2020-08-10'),
+         (6, 1, DATE '2021-04-07'),
+         (7, 2, DATE '2019-09-29'),
+         (8, 3, DATE '2020-10-03'),
+         (8, 3, DATE '2020-11-04'),
+         (9, 1, DATE '2019-01-24'),
+         (9, 1, DATE '2019-05-15'),
+         (9, 1, DATE '2020-02-27'),
+         (9, 1, DATE '2020-08-03'),
+         (10, 2, DATE '2020-05-24'),
+         (10, 4, DATE '2021-01-11');
